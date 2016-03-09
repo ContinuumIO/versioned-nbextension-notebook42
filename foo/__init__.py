@@ -8,18 +8,18 @@ def _jupyter_nbextension_paths():
         'section': 'tree',
         'src': join('static', 'tree'),
         'dest': join('foo-tree', __version__),
-        'require': 'index'
+        'require': 'foo-tree/{}/index'.format(__version__)
     }, {
         'section': 'notebook',
         'src': join('static', 'notebook'),
         'dest': join('foo-notebook', __version__),
-        'require': 'index'
+        'require': 'foo-notebook/{}/index'.format(__version__)
     }]
 
 
 def _jupyter_server_extension_paths():
     return [{
-        "module": "foo-baz"
+        "module": "foo"
     }]
 
 
